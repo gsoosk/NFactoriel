@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d//Mac/Home/Desktop/DLD/CA4/CA
+vFact
+Z0 !s110 1514418400
+!i10b 1
+!s100 3mQdaG8f`PWm_K[JTDT5<0
+IU4mVKK@:G^RjP8mNH66<U2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d//Mac/Home/Desktop/CA/simulation/modelsim
+Z3 w1514418386
+Z4 8//Mac/Home/Desktop/CA/simulation/modelsim/CA5.vo
+Z5 F//Mac/Home/Desktop/CA/simulation/modelsim/CA5.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1514418400.000000
+Z8 !s107 //Mac/Home/Desktop/CA/simulation/modelsim/CA5.vo|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|//Mac/Home/Desktop/CA/simulation/modelsim/CA5.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@fact
+vFactTB
+!s110 1514418401
+!i10b 1
+!s100 najc3V_4S89cR6fmgbS<G3
+IXh_R@i]zJ@TK3ID?GPocZ2
+R1
+R2
+w1514417297
+8\\Mac\Home\Desktop\CA\simulation\modelsim\CA5TB.v
+F\\Mac\Home\Desktop\CA\simulation\modelsim\CA5TB.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1514418401.000000
+!s107 \\Mac\Home\Desktop\CA\simulation\modelsim\CA5TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|\\Mac\Home\Desktop\CA\simulation\modelsim\CA5TB.v|
+!i113 1
+R10
+R11
+n@fact@t@b
+vhard_block
+R0
+!i10b 1
+!s100 R=SKYOkP7M6_MQECz;5Lb2
+I84kD6NKG1fk`UT_fbfJHC1
+R1
+R2
+R3
+R4
+R5
+L0 1338
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at NReg.v(1): object "O" differs only in case from object "o" in the same scope File: //Mac/Home/Desktop/CA/NReg.v Line: 1
+Info (10281): Verilog HDL Declaration information at FReg.v(1): object "O" differs only in case from object "o" in the same scope File: //Mac/Home/Desktop/CA/FReg.v Line: 1
+Info (10281): Verilog HDL Declaration information at controller.v(1): object "done" differs only in case from object "Done" in the same scope File: //Mac/Home/Desktop/CA/controller.v Line: 1

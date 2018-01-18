@@ -1,0 +1,12 @@
+module FReg(input clk, rst, ldF, initOne, input[31:0] N, output  [31:0] O);
+	reg [31:0] o ;
+	always@(posedge clk, posedge rst) begin
+		if(rst) o <= 32'd0;
+		else
+			if(ldF) o <= N;
+			else if(initOne) o<= 32'd1;
+			else o <= o;
+	end
+	assign O = o;
+	
+endmodule

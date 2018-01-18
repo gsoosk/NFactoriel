@@ -1,0 +1,30 @@
+module controller(input start, LE, L, Zi, clk, rst output done, init1, LdF, LdN, init1k, cen);
+  parameter [2:0] Idle = 3'b0, Starting = 3'b001, LoadN = 3'b010, Check = 3'b011, Init = 3'b100, Calc = 3'b101;
+  reg [2:0] ps,ns;
+  always @(start,L,Zi,LE,ps) begin
+    ns = 3'b0;
+    case(ps)
+      Idle : ns = start ? Starting : Idle;
+      Starting : ns = start ? Starting : LoadN;
+      LoadN : ns = Check;
+      Check : ns = (l == 0 | Zi == 1) ? Init : Calc;
+      Calc : ns = LE ? Calc : Idle
+      default : ns = Idle;
+    endcase
+  end
+
+  always @(start,L,Zi,LE,ps) begin
+    done=0, init1=0, LdF=0, LdN=0, init1k=0, cen=0;
+    case(ps)
+      Idle : done=1;
+      LoadN : LdN;
+      Init : begin init1=1, init1k=1; end
+      default : begin done=0, init1=0, LdF=0, LdN=0, init1k=0, cen=0; end
+    endcase
+  end
+
+  always @(posedge clk,posedge rst) begin
+    if(rst) ps <= 3'b0;
+    else ps <= ns;
+  end
+endmodule

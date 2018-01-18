@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Thu Dec 28 03:15:59 2017
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : CA5
+Top-level Entity Name : Fact
+Family : Cyclone IV GX
+Total logic elements : 19
+    Total combinational functions : 10
+    Dedicated logic registers : 15
+Total registers : 15
+Total pins : 44
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

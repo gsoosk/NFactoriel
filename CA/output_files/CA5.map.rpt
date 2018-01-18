@@ -1,0 +1,410 @@
+Analysis & Synthesis report for CA5
+Thu Dec 28 03:15:59 2017
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Fact|controller:inst1|ps
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: controller:inst1
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Dec 28 03:15:59 2017       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; CA5                                         ;
+; Top-level Entity Name              ; Fact                                        ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; 19                                          ;
+;     Total combinational functions  ; 10                                          ;
+;     Dedicated logic registers      ; 15                                          ;
+; Total registers                    ; 15                                          ;
+; Total pins                         ; 44                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total GXB Receiver Channel PCS     ; 0                                           ;
+; Total GXB Receiver Channel PMA     ; 0                                           ;
+; Total GXB Transmitter Channel PCS  ; 0                                           ;
+; Total GXB Transmitter Channel PMA  ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CGX15BF14A7     ;                    ;
+; Top-level entity name                                                      ; Fact               ; CA5                ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path       ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------+---------+
+; Multi.v                          ; yes             ; User Verilog HDL File              ; //Mac/Home/Desktop/CA/Multi.v      ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File              ; //Mac/Home/Desktop/CA/counter.v    ;         ;
+; CA5.bdf                          ; yes             ; User Block Diagram/Schematic File  ; //Mac/Home/Desktop/CA/CA5.bdf      ;         ;
+; compNPO.v                        ; yes             ; User Verilog HDL File              ; //Mac/Home/Desktop/CA/compNPO.v    ;         ;
+; compN.v                          ; yes             ; User Verilog HDL File              ; //Mac/Home/Desktop/CA/compN.v      ;         ;
+; NReg.v                           ; yes             ; User Verilog HDL File              ; //Mac/Home/Desktop/CA/NReg.v       ;         ;
+; FReg.v                           ; yes             ; User Verilog HDL File              ; //Mac/Home/Desktop/CA/FReg.v       ;         ;
+; superAnd.v                       ; yes             ; User Verilog HDL File              ; //Mac/Home/Desktop/CA/superAnd.v   ;         ;
+; controller.v                     ; yes             ; User Verilog HDL File              ; //Mac/Home/Desktop/CA/controller.v ;         ;
+; Fact.bdf                         ; yes             ; User Block Diagram/Schematic File  ; //Mac/Home/Desktop/CA/Fact.bdf     ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 44               ;
+;                          ;                  ;
+; DSP block 9-bit elements ; 0                ;
+;                          ;                  ;
+; Maximum fan-out node     ; clk~input        ;
+; Maximum fan-out          ; 15               ;
+; Total fan-out            ; 132              ;
+; Average fan-out          ; 1.17             ;
++--------------------------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                              ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------+-------------+--------------+
+; |Fact                      ; 10 (0)              ; 15 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0         ; 44   ; 0            ; |Fact                           ; Fact        ; work         ;
+;    |CA5:inst|              ; 2 (0)               ; 9 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Fact|CA5:inst                  ; CA5         ; work         ;
+;       |FReg:Nreg|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Fact|CA5:inst|FReg:Nreg        ; FReg        ; work         ;
+;       |NReg:eightBitReg|   ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Fact|CA5:inst|NReg:eightBitReg ; NReg        ; work         ;
+;       |compNPO:Comp|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Fact|CA5:inst|compNPO:Comp     ; compNPO     ; work         ;
+;    |controller:inst1|      ; 8 (8)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Fact|controller:inst1          ; controller  ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |Fact|controller:inst1|ps                                     ;
++-------------+---------+---------+----------+----------+-------------+---------+
+; Name        ; ps.CALC ; ps.INIT ; ps.CHECK ; ps.LOADN ; ps.STARTING ; ps.IDLE ;
++-------------+---------+---------+----------+----------+-------------+---------+
+; ps.IDLE     ; 0       ; 0       ; 0        ; 0        ; 0           ; 0       ;
+; ps.STARTING ; 0       ; 0       ; 0        ; 0        ; 1           ; 1       ;
+; ps.LOADN    ; 0       ; 0       ; 0        ; 1        ; 0           ; 1       ;
+; ps.CHECK    ; 0       ; 0       ; 1        ; 0        ; 0           ; 1       ;
+; ps.INIT     ; 0       ; 1       ; 0        ; 0        ; 0           ; 1       ;
+; ps.CALC     ; 1       ; 0       ; 0        ; 0        ; 0           ; 1       ;
++-------------+---------+---------+----------+----------+-------------+---------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; CA5:inst|FReg:Nreg|o[1..31]            ; Stuck at GND due to stuck port data_in ;
+; CA5:inst|counter:Counter|p[1..7]       ; Stuck at GND due to stuck port data_in ;
+; CA5:inst|counter:Counter|p[0]          ; Merged with CA5:inst|FReg:Nreg|o[0]    ;
+; controller:inst1|ps~4                  ; Lost fanout                            ;
+; controller:inst1|ps~5                  ; Lost fanout                            ;
+; controller:inst1|ps~6                  ; Lost fanout                            ;
+; Total Number of Removed Registers = 42 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 15    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 15    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controller:inst1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; IDLE           ; 000   ; Unsigned Binary                      ;
+; STARTING       ; 001   ; Unsigned Binary                      ;
+; LOADN          ; 010   ; Unsigned Binary                      ;
+; CHECK          ; 011   ; Unsigned Binary                      ;
+; INIT           ; 100   ; Unsigned Binary                      ;
+; CALC           ; 101   ; Unsigned Binary                      ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 44                          ;
+; cycloneiii_ff         ; 15                          ;
+;     CLR               ; 7                           ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_lcell_comb ; 12                          ;
+;     normal            ; 12                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 5                           ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.76                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Dec 28 03:15:24 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CA5 -c CA5
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file multi.v
+    Info (12023): Found entity 1: Multi File: //Mac/Home/Desktop/CA/Multi.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.v
+    Info (12023): Found entity 1: counter File: //Mac/Home/Desktop/CA/counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ca5.bdf
+    Info (12023): Found entity 1: CA5
+Info (12021): Found 1 design units, including 1 entities, in source file compnpo.v
+    Info (12023): Found entity 1: compNPO File: //Mac/Home/Desktop/CA/compNPO.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file compn.v
+    Info (12023): Found entity 1: compN File: //Mac/Home/Desktop/CA/compN.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nreg.v
+    Info (12023): Found entity 1: NReg File: //Mac/Home/Desktop/CA/NReg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file freg.v
+    Info (12023): Found entity 1: FReg File: //Mac/Home/Desktop/CA/FReg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file superand.v
+    Info (12023): Found entity 1: superAnd File: //Mac/Home/Desktop/CA/superAnd.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: controller File: //Mac/Home/Desktop/CA/controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fact.bdf
+    Info (12023): Found entity 1: Fact
+Info (12127): Elaborating entity "Fact" for the top level hierarchy
+Info (12128): Elaborating entity "controller" for hierarchy "controller:inst1"
+Warning (10235): Verilog HDL Always Construct warning at controller.v(6): variable "ps" is read inside the Always Construct but isn't in the Always Construct's Event Control File: //Mac/Home/Desktop/CA/controller.v Line: 6
+Warning (10235): Verilog HDL Always Construct warning at controller.v(21): variable "ps" is read inside the Always Construct but isn't in the Always Construct's Event Control File: //Mac/Home/Desktop/CA/controller.v Line: 21
+Info (10264): Verilog HDL Case Statement information at controller.v(21): all case item expressions in this case statement are onehot File: //Mac/Home/Desktop/CA/controller.v Line: 21
+Info (12128): Elaborating entity "CA5" for hierarchy "CA5:inst"
+Info (12128): Elaborating entity "compNPO" for hierarchy "CA5:inst|compNPO:Comp"
+Info (12128): Elaborating entity "counter" for hierarchy "CA5:inst|counter:Counter"
+Warning (10230): Verilog HDL assignment warning at counter.v(7): truncated value with size 32 to match size of target (8) File: //Mac/Home/Desktop/CA/counter.v Line: 7
+Info (12128): Elaborating entity "NReg" for hierarchy "CA5:inst|NReg:eightBitReg"
+Info (12128): Elaborating entity "compN" for hierarchy "CA5:inst|compN:Comp2"
+Info (12128): Elaborating entity "superAnd" for hierarchy "CA5:inst|superAnd:SuperANd"
+Info (12128): Elaborating entity "FReg" for hierarchy "CA5:inst|FReg:Nreg"
+Info (12128): Elaborating entity "Multi" for hierarchy "CA5:inst|Multi:Mult"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "nfBus[31]" is stuck at GND
+    Warning (13410): Pin "nfBus[30]" is stuck at GND
+    Warning (13410): Pin "nfBus[29]" is stuck at GND
+    Warning (13410): Pin "nfBus[28]" is stuck at GND
+    Warning (13410): Pin "nfBus[27]" is stuck at GND
+    Warning (13410): Pin "nfBus[26]" is stuck at GND
+    Warning (13410): Pin "nfBus[25]" is stuck at GND
+    Warning (13410): Pin "nfBus[24]" is stuck at GND
+    Warning (13410): Pin "nfBus[23]" is stuck at GND
+    Warning (13410): Pin "nfBus[22]" is stuck at GND
+    Warning (13410): Pin "nfBus[21]" is stuck at GND
+    Warning (13410): Pin "nfBus[20]" is stuck at GND
+    Warning (13410): Pin "nfBus[19]" is stuck at GND
+    Warning (13410): Pin "nfBus[18]" is stuck at GND
+    Warning (13410): Pin "nfBus[17]" is stuck at GND
+    Warning (13410): Pin "nfBus[16]" is stuck at GND
+    Warning (13410): Pin "nfBus[15]" is stuck at GND
+    Warning (13410): Pin "nfBus[14]" is stuck at GND
+    Warning (13410): Pin "nfBus[13]" is stuck at GND
+    Warning (13410): Pin "nfBus[12]" is stuck at GND
+    Warning (13410): Pin "nfBus[11]" is stuck at GND
+    Warning (13410): Pin "nfBus[10]" is stuck at GND
+    Warning (13410): Pin "nfBus[9]" is stuck at GND
+    Warning (13410): Pin "nfBus[8]" is stuck at GND
+    Warning (13410): Pin "nfBus[7]" is stuck at GND
+    Warning (13410): Pin "nfBus[6]" is stuck at GND
+    Warning (13410): Pin "nfBus[5]" is stuck at GND
+    Warning (13410): Pin "nfBus[4]" is stuck at GND
+    Warning (13410): Pin "nfBus[3]" is stuck at GND
+    Warning (13410): Pin "nfBus[2]" is stuck at GND
+    Warning (13410): Pin "nfBus[1]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /Desktop/CA/output_files/CA5.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 63 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 19 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 711 megabytes
+    Info: Processing ended: Thu Dec 28 03:15:59 2017
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:35
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /Desktop/CA/output_files/CA5.map.smsg.
+
+
